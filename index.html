@@ -1,11 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zakochaj się w Szczecinie</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zakochaj się w Szczecinie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #006D77, #83C5BE);
+      color: white;
+      padding: 1.5rem 2rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    .menu {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .menu a:hover {
+      color: #FFE66D;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+    }
+    .menu.mobile {
+      display: none;
+      flex-direction: column;
+      background: #006D77;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+    }
+    main {
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2.5rem;
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    section:hover {
+      transform: translateY(-4px);
+    }
+    section img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    section h2 {
+      margin-bottom: 0.8rem;
+      color: #006D77;
+      font-size: 1.5rem;
+    }
+    .placeholder {
+      height: 200px;
+      background: #eee;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-style: italic;
+      font-size: 1rem;
+    }
+    section a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #006D77;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+    section a:hover {
+      background-color: #045F67;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      .menu { display: none; }
+      .hamburger { display: flex; }
+      .menu.mobile.show { display: flex; }
+    }
+  </style>
 </head>
 <body>
-    
+  <header>
+    <nav>
+      <div class="logo">Zakochaj się w Szczecinie</div>
+      <div class="menu">
+        <a href="#atrakcje">Atrakcje</a>
+        <a href="#restauracje">Restauracje</a>
+        <a href="#kawiarnie">Kawiarnie</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+      </div>
+      <div class="menu mobile" id="mobileMenu">
+        <a href="#atrakcje" onclick="toggleMenu()">Atrakcje</a>
+        <a href="#restauracje" onclick="toggleMenu()">Restauracje</a>
+        <a href="#kawiarnie" onclick="toggleMenu()">Kawiarnie</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro">
+      <h2>Witaj na stronie poświęconej miastu Szczecin!</h2>
+      <p>Strona została stworzona z myślą o mieszkańcach i turystach, którzy chcą odkryć najciekawsze miejsca w Szczecinie. Znajdziesz tutaj inspiracje do spacerów, pysznego jedzenia i relaksu przy kawie. Naszym celem jest promowanie lokalnych atrakcji i miejsc wartych odwiedzenia.</p>
+    </section>
+
+    <section id="atrakcje">
+      <h2>Atrakcje</h2>
+      <p>Szczecin kryje wiele fascynujących miejsc – od historycznych zabytków po urokliwe bulwary nad Odrą. Kliknij, aby zobaczyć propozycje atrakcji, które warto odwiedzić.</p>
+      <a href="atrakcje.html">Zobacz atrakcje &rarr;</a>
+      <div class="placeholder">Zdjęcie atrakcji</div>
+    </section>
+
+    <section id="restauracje">
+      <h2>Restauracje</h2>
+      <p>Wybierz się w kulinarną podróż po Szczecinie! Odkryj restauracje z lokalną i międzynarodową kuchnią, które zaskoczą Twoje podniebienie.</p>
+      <a href="restauracje.html">Zobacz restauracje &rarr;</a>
+      <div class="placeholder">Zdjęcie restauracji</div>
+    </section>
+
+    <section id="kawiarnie">
+      <h2>Kawiarnie</h2>
+      <p>Klimatyczne kawiarnie Szczecina to idealne miejsca na spotkanie z przyjaciółmi lub chwilę relaksu przy dobrej kawie. Sprawdź nasze propozycje!</p>
+      <a href="kawiarnie.html">Zobacz kawiarnie &rarr;</a>
+      <div class="placeholder">Zdjęcie kawiarni</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Szczecin Explorer. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>

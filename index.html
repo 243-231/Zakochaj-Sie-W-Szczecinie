@@ -23,6 +23,11 @@
       justify-content: space-between;
       align-items: center;
     }
+      #fixed {
+	position:fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 100;}
     .logo {
       font-size: 1.8rem;
       font-weight: bold;
@@ -125,7 +130,7 @@
 </head>
 <body>
   <header>
-    <nav>
+    <nav id="fixed">
       <div class="logo">Zakochaj się w Szczecinie</div>
       <div class="menu">
         <a href="#atrakcje">Atrakcje</a>

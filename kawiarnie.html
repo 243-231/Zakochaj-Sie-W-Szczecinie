@@ -11,6 +11,46 @@
     .place { background: white; padding: 1rem; margin-bottom: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
     .place img { width: 100%; border-radius: 8px; margin-bottom: 0.5rem; }
     a { color: #006D77; text-decoration: none; display: inline-block; margin-top: 1rem; }
+    .gallery-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.scroll-button.left {
+  left: 10px;
+}
+
+.scroll-button.right {
+  right: 10px;
+}
   </style>
 </head>
 <body>
@@ -23,6 +63,20 @@
     <p>Panoramiczny widok na całe miasto z 22 piętra, pyszna kawa i domowe wypieki.</p>
     <p><strong>Adres:</strong> pl. Rodła 8, 70-419 Szczecin</p>
     <p><strong>Kontakt:</strong> tel. 91 433 44 55</p>
+    <div class="gallery-container">
+      <button class="scroll-button left" onclick="scrollGallery(-300)">←</button>
+    
+      <div class="gallery" id="gallery">
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+      </div>
+    
+      <button class="scroll-button right" onclick="scrollGallery(300)">→</button>
+    </div>
   </div>
 
   <div class="place">
@@ -31,6 +85,20 @@
     <p>Stylowe miejsce z klimatycznym wystrojem, serwujące kawy speciality i lokalne wypieki.</p>
     <p><strong>Adres:</strong> ul. Krzywoustego 14, 70-250 Szczecin</p>
     <p><strong>Kontakt:</strong> tel. 91 321 43 21</p>
+    <div class="gallery-container">
+      <button class="scroll-button left" onclick="scrollGallery(-300)">←</button>
+    
+      <div class="gallery" id="gallery">
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+      </div>
+    
+      <button class="scroll-button right" onclick="scrollGallery(300)">→</button>
+    </div>
   </div>
 
   <div class="place">
@@ -39,6 +107,20 @@
     <p>Klimatyczne miejsce z pyszną, świeżo parzoną kawą oraz z wypiekami idealnymi dla osób wege, więc każdy znajdzie coś dla siebie. </p>
     <p><strong>Adres:</strong>al. Wojska Polskiego 35/u3, 70-473 Szczecin</p>
     <p><strong>Kontakt:</strong> e-mail: kontakt@altcoffee.pl</p>
+    <div class="gallery-container">
+      <button class="scroll-button left" onclick="scrollGallery(-300)">←</button>
+    
+      <div class="gallery" id="gallery">
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+      </div>
+    
+      <button class="scroll-button right" onclick="scrollGallery(300)">→</button>
+    </div>
   </div>
 
   <div class="place">
@@ -47,6 +129,20 @@
     <p>Kawiarnia Fundacji Kota Gacka to świetne miejsce nie tylko dla miłośników kawy i wypieków, ale również kotów, które szukają domów i stanowią miłe towarzystwo przy dobrej kawie.</p>
     <p><strong>Adres:</strong> ul. Kaszubska 17/u1, 70-402 Szczecin</p>
     <p><strong>Kontakt:</strong>tel. 506 076 520</p>
+    <div class="gallery-container">
+      <button class="scroll-button left" onclick="scrollGallery(-300)">←</button>
+    
+      <div class="gallery" id="gallery">
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+      </div>
+    
+      <button class="scroll-button right" onclick="scrollGallery(300)">→</button>
+    </div>
   </div>
 
   <div class="place">
@@ -55,6 +151,20 @@
     <p>Przystań Kawa i wino to kameralne miejsce, które w swojej ofercie ma nie tylko pyszne kawy, ale również różnorodne wina.</p>
     <p><strong>Adres:</strong> Generała Ludomiła Rayskiego 19, 70-435 Szczecin</p>
     <p><strong>Kontakt:</strong> tel. 792 053 667</p>
+    <div class="gallery-container">
+      <button class="scroll-button left" onclick="scrollGallery(-300)">←</button>
+    
+      <div class="gallery" id="gallery">
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+      </div>
+    
+      <button class="scroll-button right" onclick="scrollGallery(300)">→</button>
+    </div>
   </div>
 
   <div class="place">
@@ -63,6 +173,20 @@
     <p>Lavanda to kawiarnia, które oferuje nam przeróżne napoje kawowe o smaku lawendy, idealne dla miłośników tych kwiatów.</p>
     <p><strong>Adres:</strong>Al. Wyzwolenia 2, 70-553 Szczecin</p>
     <p><strong>Kontakt:</strong>ig: lavanda.kawiarnia</p>
+    <div class="gallery-container">
+      <button class="scroll-button left" onclick="scrollGallery(-300)">←</button>
+    
+      <div class="gallery" id="gallery">
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+      </div>
+    
+      <button class="scroll-button right" onclick="scrollGallery(300)">→</button>
+    </div>
   </div>
 
   <div class="place">
@@ -71,6 +195,20 @@
     <p>Jest to kolejne miejsce na mapie Szczecina, gdzie wypijemy pyszną kawę w towarzystwie kotów.</p>
     <p><strong>Adres:</strong> ul. Śląska 5/1, 70-431 Szczecin</p>
     <p><strong>Kontakt:</strong> tel. 690 439 222</p>
+    <div class="gallery-container">
+      <button class="scroll-button left" onclick="scrollGallery(-300)">←</button>
+    
+      <div class="gallery" id="gallery">
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+      </div>
+    
+      <button class="scroll-button right" onclick="scrollGallery(300)">→</button>
+    </div>
   </div>
 
   <div class="place">
@@ -79,6 +217,20 @@
     <p>Klimatyczne miejsce ze świetnymi wypiekami, dla osób, które cenią sobie smak dobrej kawy.</p>
     <p><strong>Adres:</strong>ul. Stanisława Moniuszki 9, 71-430 Szczecin</p>
     <p><strong>Kontakt:</strong>tel. 884 167 758</p>
+    <div class="gallery-container">
+      <button class="scroll-button left" onclick="scrollGallery(-300)">←</button>
+    
+      <div class="gallery" id="gallery">
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+      </div>
+    
+      <button class="scroll-button right" onclick="scrollGallery(300)">→</button>
+    </div>
   </div>
 
   <div class="place">
@@ -87,6 +239,20 @@
     <p>Idealne miejsce na pyszną kawę i dobre lato w gorący dzień.</p>
     <p><strong>Adres:</strong>Aleja Bohaterów Warszawy 40, 70-342 Szczecin</p>
     <p><strong>Kontakt:</strong>ig: @patiocafeturzyn</p>
+    <div class="gallery-container">
+      <button class="scroll-button left" onclick="scrollGallery(-300)">←</button>
+    
+      <div class="gallery" id="gallery">
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+      </div>
+    
+      <button class="scroll-button right" onclick="scrollGallery(300)">→</button>
+    </div>
   </div>
 
   <div class="place">
@@ -95,9 +261,33 @@
     <p>To miejsce w którym nie tylko wypijesz kawe i zjesz deser, ale także dostaniesz pyszne śniadanie</p>
     <p><strong>Adres:</strong>Plac Żołnierza Polskiego 3/1, 70-551 Szczecin</p>
     <p><strong>Kontakt:</strong>tel. 797 259 304</p>
+    <div class="gallery-container">
+      <button class="scroll-button left" onclick="scrollGallery(-300)">←</button>
+    
+      <div class="gallery" id="gallery">
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+        <img src="" alt="Image 1" />
+        <img src="" alt="Image 2" />
+        <img src="" alt="Image 3" />
+      </div>
+    
+      <button class="scroll-button right" onclick="scrollGallery(300)">→</button>
+    </div>
   </div>
   
   
   <a href="index.html">← Powrót na stronę główną</a>
+
+  <script>
+    function scrollGallery(amount) {
+      const gallery = document.getElementById('gallery');
+      gallery.scrollBy({
+        left: amount,
+        behavior: 'smooth'
+     });
+    }
+  </script>
 </body>
 </html>

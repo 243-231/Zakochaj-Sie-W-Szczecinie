@@ -50,10 +50,11 @@
       gap: 5px;
     }
     .hamburger div {
-      width: 25px;
-      height: 3px;
-      background: white;
-    }
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
     .menu.mobile {
       display: none;
       flex-direction: column;
@@ -188,7 +189,7 @@
   padding-top: 1rem;
   margin-top: 2rem;
 }
-}
+
     @media (max-width: 768px) {
       .menu { display: none; }
       .hamburger { display: flex; }
@@ -280,6 +281,7 @@
     <nav>
       <div class="logo">Zakochaj się w Szczecinie</div>
       <div class="menu">
+        <a href="#intro">Strona Główna</a>
         <a href="#atrakcje">Atrakcje</a>
         <a href="#restauracje">Restauracje</a>
         <a href="#kawiarnie">Kawiarnie</a>
@@ -288,6 +290,7 @@
         <div></div><div></div><div></div>
       </div>
       <div class="menu mobile" id="mobileMenu">
+        <a href="#intro" onclick="toggleMenu()">Strona Główna</a>
         <a href="#atrakcje" onclick="toggleMenu()">Atrakcje</a>
         <a href="#restauracje" onclick="toggleMenu()">Restauracje</a>
         <a href="#kawiarnie" onclick="toggleMenu()">Kawiarnie</a>

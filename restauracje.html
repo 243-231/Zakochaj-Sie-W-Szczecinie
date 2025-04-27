@@ -206,13 +206,15 @@ POSZUKAJ SWOJEGO ULUBIONEGO …
   <a href="index.html">← Powrót na stronę główną</a>
 
   <script>
-    function scrollGallery(amount) {
-      const gallery = document.getElementById('gallery');
-      gallery.scrollBy({
-        left: amount,
-        behavior: 'smooth'
-     });
-    }
+    function scrollGallery(galleryId, amount) {
+  const gallery = document.getElementById(galleryId);
+  if (gallery) {
+    gallery.scrollBy({
+      left: amount,
+      behavior: 'smooth'
+    });
+  }
+}
   </script>
 </body>
 </html>

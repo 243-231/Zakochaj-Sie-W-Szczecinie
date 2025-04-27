@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
@@ -64,6 +64,48 @@
       width: 100%;
       padding: 1rem;
     }
+    .hero {
+  background: linear-gradient(rgba(0, 109, 119, 0.8), rgba(131, 197, 190, 0.8)),
+              url('panorama.png') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 8rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-button {
+  padding: 0.8rem 2rem;
+  background-color: #FFE66D;
+  color: #006D77;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #ffd700;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
     main {
       padding: 2rem;
       margin-top: 85px;
@@ -102,13 +144,35 @@
     section a:hover {
       background-color: #045F67;
     }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 2rem;
-    }
+    .footer {
+  background: #006D77;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-content p {
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: #FFE66D;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffd700;
+}
     @media (max-width: 768px) {
       .menu { display: none; }
       .hamburger { display: flex; }
@@ -178,9 +242,12 @@
   </header>
 
   <main>
-    <section id="intro">
-      <h2>Witaj na stronie poświęconej miastu Szczecin!</h2>
-      <p>Strona została stworzona z myślą o mieszkańcach i turystach, którzy chcą odkryć najciekawsze miejsca w Szczecinie. Znajdziesz tutaj inspiracje do spacerów, pysznego jedzenia i relaksu przy kawie. Naszym celem jest promowanie lokalnych atrakcji i miejsc wartych odwiedzenia.</p>
+    <section id="intro" class="hero">
+      <div class="hero-content">
+        <h1>Zakochaj się w Szczecinie</h1>
+        <p>Odkryj najpiękniejsze zakątki, smakuj lokalne przysmaki i poznaj magiczną atmosferę miasta portowego. Twój przewodnik po Szczecinie zaczyna się tutaj!</p>
+        <a href="#atrakcje" class="hero-button">Poznaj Szczecin</a>
+      </div>
     </section>
 
     <section id="atrakcje">
@@ -244,8 +311,15 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Szczecin Explorer. Wszystkie prawa zastrzeżone.</p>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Zakochaj się w Szczecinie </p>
+      <div class="footer-links">
+        <a href="#atrakcje">Atrakcje</a>
+        <a href="#restauracje">Restauracje</a>
+        <a href="#kawiarnie">Kawiarnie</a>
+      </div>
+    </div>
   </footer>
 
   <script>

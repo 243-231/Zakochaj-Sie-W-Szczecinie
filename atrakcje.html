@@ -94,6 +94,32 @@
       </div>
     
       <button class="scroll-button right" onclick="scrollGallery('gallery-1', 300)">→</button>
+
+<style>
+    #map { height: 100vh; margin: 0; padding: 0; }
+    body { margin: 0; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Inicjalizacja mapy – Wały Chrobrego w Szczecinie
+    var map = L.map('map').setView([53.4325, 14.5636], 16);
+
+    // Warstwa z OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Marker – Wały Chrobrego
+    L.marker([53.4325, 14.5636]).addTo(map)
+      .bindPopup('Wały Chrobrego, Szczecin')
+      .openPopup();
+  </script>
+
+      
     </div>
   </div>
 

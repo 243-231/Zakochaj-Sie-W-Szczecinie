@@ -184,6 +184,24 @@
       </div>
     
       <button class="scroll-button right" onclick="scrollGallery('gallery-3', 300)">→</button>
+
+
+
+<div id="podziemne-trasy-map" style="width: 100%; height: 500px;"></div>
+<script>
+  const podziemneTrasyMap = L.map('podziemne-trasy-map').setView([53.4280, 14.5500], 16);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(podziemneTrasyMap);
+
+  L.marker([53.4280, 14.5500]).addTo(podziemneTrasyMap)
+    .bindPopup('Podziemne Trasy Szczecina')
+    .openPopup();
+</script>
+
+
+      
     </div>
     
   </div>

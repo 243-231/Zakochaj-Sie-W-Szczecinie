@@ -108,10 +108,6 @@
     // Inicjalizacja mapy – Wały Chrobrego w Szczecinie
     var map = L.map('map').setView([53.4325, 14.5636], 16);
 
-    // Warstwa z OpenStreetMap
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
 
     // Marker – Wały Chrobrego
     L.marker([53.4325, 14.5636]).addTo(map)

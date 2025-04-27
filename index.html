@@ -12,7 +12,6 @@
       background-color: #f9f9f9;
       color: #333;
       line-height: 1.6;
-  padding-top: 60px; 
     }
     header {
       background: linear-gradient(to right, #006D77, #83C5BE);
@@ -27,6 +26,29 @@
       justify-content: space-between;
       align-items: center;
     }
+    /* Ustawienia paska nawigacyjnego (fixed, aby pozostał na górze strony) */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  position: fixed; /* Pasek nawigacyjny na stałe */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ustawi pasek nawigacyjny nad resztą treści */
+}
+
+/* Ustawienie przestrzeni dla treści strony, by nie nachodziła na pasek nawigacyjny */
+body {
+  margin-top: 80px; /* Dodaj przestrzeń nad treścią, dostosuj do wysokości swojego paska nawigacyjnego */
+}
+
+/* Dodatkowe style dla zdjęć, aby nie nachodziły na pasek */
+img {
+  max-width: 100%; /* Zdjęcia nie wychodzą poza kontener */
+  height: auto; /* Utrzymanie proporcji zdjęcia */
+}
+
     .logo {
       font-size: 1.8rem;
       font-weight: bold;

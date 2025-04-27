@@ -309,9 +309,9 @@
       <p>Szczecin kryje wiele fascynujących miejsc – od historycznych zabytków po urokliwe bulwary nad Odrą. Kliknij, aby zobaczyć propozycje atrakcji, które warto odwiedzić.</p>
       <a href="atrakcje.html">Zobacz atrakcje &rarr;</a>
       <div class="gallery-container">
-        <button class="scroll-button left" onclick="scrollGallery(-300)">←</button>
+        <button class="scroll-button left" onclick="scrollGallery('gallery-atrakcje', -300)">←</button>
       
-        <div class="gallery" id="gallery">
+        <div class="gallery" id="gallery-atrakcje">
           <img src="walychrobrego.png" alt="Image 1" />
           <img src="Fabrykawody.png" alt="Image 2" />
           <img src="park.png" alt="Image 3" />
@@ -320,7 +320,7 @@
           <img src="podziemnyszczecin.png" alt="Image 3" />
         </div>
       
-        <button class="scroll-button right" onclick="scrollGallery(300)">→</button>
+        <button class="scroll-button right" onclick="scrollGallery('gallery-atrakcje', 300)">→</button>
       </div>
     </section>
 
@@ -329,9 +329,9 @@
       <p>Wybierz się w kulinarną podróż po Szczecinie! Odkryj restauracje z lokalną i międzynarodową kuchnią, które zaskoczą Twoje podniebienie.</p>
       <a href="restauracje.html">Zobacz restauracje &rarr;</a>
       <div class="gallery-container">
-        <button class="scroll-button left" onclick="scrollGallery(-300)">←</button>
+        <button class="scroll-button left" onclick="scrollGallery('gallery-restauracje', -300)">←</button>
       
-        <div class="gallery" id="gallery">
+        <div class="gallery" id="gallery-restauracje">
           <img src="manekin.png" alt="Image 1" />
           <img src="ministerstwo.png" alt="Image 2" />
           <img src="lokalna1.png" alt="Image 3" />
@@ -340,7 +340,7 @@
           <img src="bjagle.png" alt="Image 3" />
         </div>
       
-        <button class="scroll-button right" onclick="scrollGallery(300)">→</button>
+        <button class="scroll-button right" onclick="scrollGallery('gallery-restauracje', 300)">→</button>
       </div>
     </section>
 
@@ -349,9 +349,9 @@
       <p>Klimatyczne kawiarnie Szczecina to idealne miejsca na spotkanie z przyjaciółmi lub chwilę relaksu przy dobrej kawie. Sprawdź nasze propozycje!</p>
       <a href="kawiarnie.html">Zobacz kawiarnie &rarr;</a>
       <div class="gallery-container">
-        <button class="scroll-button left" onclick="scrollGallery(-300)">←</button>
+        <button class="scroll-button left" onclick="scrollGallery('gallery-kawiarnie', -300)">←</button>
       
-        <div class="gallery" id="gallery">
+        <div class="gallery" id="gallery-kawiarnie">
           <img src="" alt="Image 1" />
           <img src="" alt="Image 2" />
           <img src="" alt="Image 3" />
@@ -360,7 +360,7 @@
           <img src="" alt="Image 3" />
         </div>
       
-        <button class="scroll-button right" onclick="scrollGallery(300)">→</button>
+        <button class="scroll-button right" onclick="scrollGallery('gallery-kawiarnie', 300)">→</button>
       </div>
     </section>
   </main>
@@ -398,13 +398,15 @@
       const menu = document.getElementById('mobileMenu');
       menu.classList.toggle('show');
     }
-    function scrollGallery(amount) {
-      const gallery = document.getElementById('gallery');
-      gallery.scrollBy({
-        left: amount,
-        behavior: 'smooth'
-     });
-    }
+    function scrollGallery(galleryId, amount) {
+  const gallery = document.getElementById(galleryId);
+  if (gallery) {
+    gallery.scrollBy({
+      left: amount,
+      behavior: 'smooth'
+    });
+  }
+}
     function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }

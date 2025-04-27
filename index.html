@@ -219,6 +219,44 @@
 .scroll-button.right {
   right: 10px;
 }
+.social-icons {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.back-to-top {
+  margin-top: 1rem;
+  background: #FFE66D;
+  color: #006D77;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #ffd700;
+}
+
+.disclaimer {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 1rem;
+}
   </style>
 </head>
 <body>
@@ -313,12 +351,17 @@
 
   <footer class="footer">
     <div class="footer-content">
-      <p>&copy; 2025 Zakochaj się w Szczecinie </p>
+      <p>&copy; 2025 Zakochaj się w Szczecinie</p>
+      
       <div class="footer-links">
         <a href="#atrakcje">Atrakcje</a>
         <a href="#restauracje">Restauracje</a>
         <a href="#kawiarnie">Kawiarnie</a>
       </div>
+  
+      <p class="disclaimer">Projekt zaliczeniowy - Uniwersytet Szczeciński 2025</p>
+  
+      <button onclick="scrollToTop()" class="back-to-top">↑ Wróć na górę</button>
     </div>
   </footer>
 
@@ -334,6 +377,9 @@
         behavior: 'smooth'
      });
     }
+    function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
   </script>
 </body>
 </html>

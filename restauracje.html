@@ -137,7 +137,7 @@ h2 {
 
 
 <!-- Miejsce na mapę -->
-<div id="zamek-map" style="width: 100%; height: 500px;"></div>
+<div id="bajgle-map" style="width: 100%; height: 500px;"></div>
 
 <!-- Leaflet: biblioteka map -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -145,16 +145,17 @@ h2 {
 
 <!-- Skrypt z mapą -->
 <script>
-  const zamekMap = L.map('zamek-map').setView([53.4274, 14.5581], 16);
+  const bajgleMap = L.map('bajgle-map').setView([53.4285, 14.5528], 16);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(zamekMap);
+  }).addTo(bajgleMap);
 
-  L.marker([53.4274, 14.5581]).addTo(zamekMap)
-    .bindPopup('Bajgle Króla Jana, Rynek Nowy 6, Szczecin')
+  L.marker([53.4285, 14.5528]).addTo(bajgleMap)
+    .bindPopup('Bajgle Króla Jana, ul. Rynek Nowy 6, Szczecin')
     .openPopup();
 </script>
+
 
 
 

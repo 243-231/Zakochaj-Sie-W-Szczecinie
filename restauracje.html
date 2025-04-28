@@ -136,6 +136,25 @@ h2 {
       <button class="scroll-button right" onclick="scrollGallery('gallery-2', 300)">→</button>
 
 
+<!-- Miejsce na mapę -->
+<div id="zamek-map" style="width: 100%; height: 500px;"></div>
+
+<!-- Leaflet: biblioteka map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt z mapą -->
+<script>
+  const zamekMap = L.map('zamek-map').setView([53.4274, 14.5581], 16);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(zamekMap);
+
+  L.marker([53.4274, 14.5581]).addTo(zamekMap)
+    .bindPopup('Bajgle Króla Jana, Rynek Nowy 6, Szczecin')
+    .openPopup();
+</script>
 
 
 
@@ -162,6 +181,30 @@ h2 {
       </div>
     
       <button class="scroll-button right" onclick="scrollGallery('gallery-3', 300)">→</button>
+
+
+<!-- Miejsce na mapę -->
+<div id="zamek-map" style="width: 100%; height: 500px;"></div>
+
+<!-- Leaflet: biblioteka map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt z mapą -->
+<script>
+  const zamekMap = L.map('zamek-map').setView([53.4285, 14.5600], 16);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(zamekMap);
+
+  L.marker([53.4285, 14.5600]).addTo(zamekMap)
+    .bindPopup('Restauracja Lokalna, ul. Krzysztofa Kolumba 2D, Szczecin')
+    .openPopup();
+</script>
+
+
+      
     </div>
   </div>
 
@@ -185,6 +228,30 @@ h2 {
       </div>
     
       <button class="scroll-button right" onclick="scrollGallery('gallery-4', 300)">→</button>
+
+
+
+<!-- Miejsce na mapę -->
+<div id="zamek-map" style="width: 100%; height: 500px;"></div>
+
+<!-- Leaflet: biblioteka map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt z mapą -->
+<script>
+  const zamekMap = L.map('zamek-map').setView([53.4274, 14.5581], 16);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(zamekMap);
+
+  L.marker([53.4274, 14.5581]).addTo(zamekMap)
+    .bindPopup('Ministerstwo Magii, ul. Księdza Piotra Ściegiennego 7a/u2, Szczecin')
+    .openPopup();
+</script>
+
+      
     </div>
   </div>
   
@@ -207,6 +274,24 @@ h2 {
       </div>
     
       <button class="scroll-button right" onclick="scrollGallery('gallery-5', 300)">→</button>
+
+
+<!-- Miejsce na mapę -->
+<div id="zamek-map" style="width: 100%; height: 500px;"></div>
+
+<!-- Leaflet: biblioteka map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt z mapą -->
+<script>
+  const zamekMap = L.map('zamek-map').setView([53.4280, 14.5526], 16);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(zamekMap);
+
+      
     </div>
   </div>
 
@@ -230,6 +315,31 @@ h2 {
       </div>
     
       <button class="scroll-button right" onclick="scrollGallery('gallery-6', 300)">→</button>
+
+
+<!-- Miejsce na mapę -->
+<div id="manekin-map" style="width: 100%; height: 500px;"></div>
+
+<!-- Leaflet: biblioteka map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt z mapą -->
+<script>
+  const manekinMap = L.map('manekin-map').setView([53.4285, 14.5528], 16);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(manekinMap);
+
+  L.marker([53.4285, 14.5528]).addTo(manekinMap)
+    .bindPopup('Manekin, ul. Ludomiła Rayskiego 16, Szczecin')
+    .openPopup();
+</script>
+
+
+
+      
     </div>
   </div>
 
@@ -253,6 +363,30 @@ h2 {
       </div>
 
       <button class="scrol-button right" onclick="scrollGallery('gallery-6, 300)"></button>
+
+
+<!-- Miejsce na mapę -->
+<div id="epicka-map" style="width: 100%; height: 500px;"></div>
+
+<!-- Leaflet: biblioteka map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt z mapą -->
+<script>
+  const epickaMap = L.map('epicka-map').setView([53.4286, 14.5528], 16);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(epickaMap);
+
+  L.marker([53.4286, 14.5528]).addTo(epickaMap)
+    .bindPopup('Epicka, ul. Księcia Bogusława X 1-2, Szczecin')
+    .openPopup();
+</script>
+
+
+      
     </div>
   </div>
 
@@ -275,6 +409,30 @@ h2 {
       </div>
 
       <button class="scroll-button right" onclick="scrollGallery('gallery-6, 300)"></button>
+
+
+<!-- Miejsce na mapę -->
+<div id="tajska-map" style="width: 100%; height: 500px;"></div>
+
+<!-- Leaflet: biblioteka map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt z mapą -->
+<script>
+  const tajskaMap = L.map('tajska-map').setView([53.4280, 14.5526], 16);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(tajskaMap);
+
+  L.marker([53.4280, 14.5526]).addTo(tajskaMap)
+    .bindPopup('Tajska, ul. Jagiellońska 11, Szczecin')
+    .openPopup();
+</script>
+
+
+      
     </div>
   </div>
 
@@ -297,6 +455,29 @@ h2 {
       </div>
 
       <button class="scroll-button right" onclick="scrollGallery('gallery-6, 300)"></button>
+
+<!-- Miejsce na mapę -->
+<div id="oh-my-kimchi-map" style="width: 100%; height: 500px;"></div>
+
+<!-- Leaflet: biblioteka map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt z mapą -->
+<script>
+  const ohMyKimchiMap = L.map('oh-my-kimchi-map').setView([53.4286, 14.5528], 16);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(ohMyKimchiMap);
+
+  L.marker([53.4286, 14.5528]).addTo(ohMyKimchiMap)
+    .bindPopup('Oh, my Kimchi, ul. Śląska 42, Szczecin')
+    .openPopup();
+</script>
+
+
+      
     </div>
   </div>
 

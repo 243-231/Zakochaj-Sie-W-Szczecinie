@@ -500,6 +500,29 @@ h2 {
       </div>
 
       <button class="scroll-button right" onclick="scrollGallery('gallery-6', 300)"></button>
+
+<!-- Miejsce na mapę -->
+<div id="ziemniak-map" style="width: 100%; height: 500px;"></div>
+
+<!-- Leaflet: biblioteka map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt z mapą -->
+<script>
+  const ziemniakMap = L.map('ziemniak-map').setView([53.4280, 14.5526], 16);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(ziemniakMap);
+
+  L.marker([53.4280, 14.5526]).addTo(ziemniakMap)
+    .bindPopup('Ziemniak i Spółka, ul. Dworcowa 19/1u, Szczecin')
+    .openPopup();
+</script>
+
+
+      
     </div>
   </div>
   

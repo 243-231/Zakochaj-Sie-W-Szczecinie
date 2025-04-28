@@ -93,21 +93,6 @@ h2 {
       <button class="scroll-button right" onclick="scrollGallery('gallery-1', 300)">→</button>
 
 
-
-<div class="map" id="zamek-map" style="width: 100%; height: 500px;"></div>
-<script>
-  const zamekMap = L.map('zamek-map').setView([53.4285, 14.5528], 16);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(zamekMap);
-
-  L.marker([53.4285, 14.5528]).addTo(zamekMap)
-    .bindPopup('Z Drugiej Strony Lustra, ul. Piłsudskiego 18/2, Szczecin')
-    .openPopup();
-</script>
-
-
       
     </div>
   </div>
@@ -133,9 +118,6 @@ h2 {
       <button class="scroll-button right" onclick="scrollGallery('gallery-2', 300)">→</button>
 
 
-L.marker([53.4285, 14.5528]).addTo(zamekMap)
-  .bindPopup('Bajgle Króla Jana, ul. Rynek Nowy 6, Szczecin')
-  .openPopup();
 
 
 

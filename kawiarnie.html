@@ -85,19 +85,6 @@ h2 {
       <button class="scroll-button right" onclick="scrollGallery('gallery-1', 300)">→</button>
 
 
-<div id="cafe-22-map" style="width: 100%; height: 500px;"></div>
-<script>
-  const cafe22Map = L.map('cafe-22-map').setView([53.4286, 14.5526], 16);  // Poprawione współrzędne dla Café 22
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(cafe22Map);
-
-  L.marker([53.4286, 14.5526]).addTo(cafe22Map)
-    .bindPopup('Café 22, Plac Rodła 8, Szczecin')
-    .openPopup();
-</script>
-
 
       
     </div>

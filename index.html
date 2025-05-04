@@ -537,6 +537,50 @@ faders.forEach(fader => {
     "retina_detect": true
   });
 </script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": { "value": "#ffffff" },
+      "shape": {
+        "type": "circle",
+        "stroke": { "width": 0, "color": "#000000" }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": true
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "move": {
+        "enable": true,
+        "speed": 1.5,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": false },
+        "onclick": { "enable": false }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
 
 </body>
 </html>

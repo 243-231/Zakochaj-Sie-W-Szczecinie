@@ -68,11 +68,35 @@ h2 {
 map {
       margin-top: 30px;
     }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#particles-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* Żeby treść była nad animacją */
+main, .content, .gallery-container, .place {
+  position: relative;
+  z-index: 1;
+}
 
     
   </style>
 </head>
 <body>
+  <div id="particles-bg"></div>
+
   <a href="index.html">← Powrót na stronę główną</a>
   <h1>Restauracje w Szczecinie</h1>
 
@@ -626,6 +650,46 @@ map {
   }
 }
   </script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-bg", {
+    "particles": {
+      "number": {
+        "value": 25,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": { "value": "#b8860b" }, // Złoty kolor
+      "shape": { "type": "circle" },
+      "opacity": {
+        "value": 0.5,
+        "random": true
+      },
+      "size": {
+        "value": 12,
+        "random": true
+      },
+      "move": {
+        "enable": true,
+        "speed": 0.6,
+        "direction": "top",
+        "random": true,
+        "straight": false,
+        "out_mode": "out"
+      }
+    },
+    "interactivity": {
+      "events": {
+        "onhover": { "enable": false },
+        "onclick": { "enable": false }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
 </body>
 </html>
 

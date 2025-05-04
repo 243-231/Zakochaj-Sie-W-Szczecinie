@@ -297,6 +297,26 @@
     .hero-button:active {
       background-color: #228B22; /* Jeszcze ciemniejszy zielony */
     }
+    .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hover card effect */
+  .hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
 
   </style>
 
@@ -327,7 +347,7 @@
   </header>
 
   <main>
-    <section id="intro" class="hero">
+    <section id="intro" class="hero" class="fade-in">
       <div class="hero-content">
         <h1>Zakochaj się w Szczecinie</h1>
         <p>Odkryj najpiękniejsze zakątki, smakuj lokalne przysmaki i poznaj magiczną atmosferę miasta portowego. Twój przewodnik po Szczecinie zaczyna się tutaj!</p>
@@ -335,14 +355,14 @@
       </div>
     </section>
 
-    <section id="atrakcje">
+    <section id="atrakcje" class="fade-in">
       <h2>Atrakcje</h2>
       <p>Szczecin kryje wiele fascynujących miejsc – od historycznych zabytków po urokliwe bulwary nad Odrą. Kliknij, aby zobaczyć propozycje atrakcji, które warto odwiedzić.</p>
       <a href="atrakcje.html">Zobacz atrakcje &rarr;</a>
       <div class="gallery-container">
         <button class="scroll-button left" onclick="scrollGallery('gallery-atrakcje', -300)">←</button>
       
-        <div class="gallery" id="gallery-atrakcje">
+        <div class="gallery" id="gallery-atrakcje" class="hover-card">
           <img src="walychrobrego.png" alt="Image 1" />
           <img src="Fabrykawody.png" alt="Image 2" />
           <img src="park.png" alt="Image 3" />
@@ -355,14 +375,14 @@
       </div>
     </section>
 
-    <section id="restauracje">
+    <section id="restauracje" class="fade-in">
       <h2>Restauracje</h2>
       <p>Wybierz się w kulinarną podróż po Szczecinie! Odkryj restauracje z lokalną i międzynarodową kuchnią, które zaskoczą Twoje podniebienie.</p>
       <a href="restauracje.html">Zobacz restauracje &rarr;</a>
       <div class="gallery-container">
         <button class="scroll-button left" onclick="scrollGallery('gallery-restauracje', -300)">←</button>
       
-        <div class="gallery" id="gallery-restauracje">
+        <div class="gallery" id="gallery-restauracje" class="hover-card">
           <img src="manekin.png" alt="Image 1" />
           <img src="ministerstwo.png" alt="Image 2" />
           <img src="lokalna1.png" alt="Image 3" />
@@ -375,14 +395,14 @@
       </div>
     </section>
 
-    <section id="kawiarnie">
+    <section id="kawiarnie" class="fade-in">
       <h2>Kawiarnie</h2>
       <p>Klimatyczne kawiarnie Szczecina to idealne miejsca na spotkanie z przyjaciółmi lub chwilę relaksu przy dobrej kawie. Sprawdź nasze propozycje!</p>
       <a href="kawiarnie.html">Zobacz kawiarnie &rarr;</a>
       <div class="gallery-container">
         <button class="scroll-button left" onclick="scrollGallery('gallery-kawiarnie', -300)">←</button>
       
-        <div class="gallery" id="gallery-kawiarnie">
+        <div class="gallery" id="gallery-kawiarnie" class="hover-card">
           <img src="koci444.png" alt="Image 1" />
           <img src="lim.png" alt="Image 2" />
           <img src="patiooo2.png" alt="Image 3" />
@@ -441,6 +461,25 @@
     function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+// Fade-in on scroll
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
   </script>
 </body>
 </html>

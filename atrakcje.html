@@ -93,12 +93,26 @@ h2 {
 
   #map { height: 100vh; margin: 30; padding: 10; }
     body { margin: 50; }
+<style>
+  #particles-stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: 0;
+    pointer-events: none;
+  }
+</style>
 
 
     
   </style>
 </head>
 <body>
+  <div id="particles-stars"></div>
+
   <a href="index.html">← Powrót na stronę główną</a>
   <h1>Atrakcje w Szczecinie</h1>
 
@@ -488,5 +502,49 @@ h2 {
   }
 }
   </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-stars", {
+    "particles": {
+      "number": {
+        "value": 35,
+        "density": {
+          "enable": true,
+          "value_area": 1000
+        }
+      },
+      "color": { "value": "#003366" },
+      "shape": {
+        "type": "star",
+        "stroke": { "width": 0, "color": "#000000" }
+      },
+      "opacity": {
+        "value": 0.8,
+        "random": true
+      },
+      "size": {
+        "value": 5,
+        "random": true
+      },
+      "move": {
+        "enable": true,
+        "speed": 0.7,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out"
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": false },
+        "onclick": { "enable": false }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
 </body>
 </html>

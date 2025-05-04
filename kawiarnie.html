@@ -163,7 +163,22 @@ main, .gallery-container, .place, .content {
       
     </div>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.962790788174!2d14.528709675667017!3d53.4333735682096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa09398f9d938d%3A0x80869402d2b10ce!2sJagiello%C5%84ska%2067%2C%2070-372%20Szczecin!5e0!3m2!1spl!2spl!4v1746400238847!5m2!1spl!2spl" width="100" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <script>
+  // Współrzędne Kafe Taniec – Szczecin (al. Wojska Polskiego 40)
+  var map = L.map('map').setView([53.4309, 14.5529], 16);
+
+  // Warstwa mapy OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap',
+    maxZoom: 19
+  }).addTo(map);
+
+  // Pinezka z nazwą i adresem
+  L.marker([53.4309, 14.5529]).addTo(map)
+    .bindPopup('Kafe Taniec<br>al. Wojska Polskiego 40, Szczecin')
+    .openPopup();
+</script>
+
   </div>
 
   <div class="place">
@@ -197,6 +212,22 @@ main, .gallery-container, .place, .content {
 
       
     </div>
+    <script>
+  // Współrzędne #alternatywnie – Szczecin
+  var map = L.map('map').setView([53.4332, 14.5387], 16);
+
+  // Warstwa mapy OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap',
+    maxZoom: 19
+  }).addTo(map);
+
+  // Pinezka z nazwą i adresem
+  L.marker([53.4332, 14.5387]).addTo(map)
+    .bindPopup('#alternatywnie<br>ul. Jagiellońska 86, Szczecin')
+    .openPopup();
+</script>
+
   </div>
 
   <div class="place">
@@ -232,6 +263,27 @@ main, .gallery-container, .place, .content {
 
       
     </div>
+    <!-- Kontener mapy -->
+<div id="map" style="height: 400px; width: 100%;"></div>
+
+<!-- Ładowanie Leaflet CSS i JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt inicjujący mapę -->
+<script>
+  var map = L.map('map').setView([53.4279, 14.5521], 16); // Współrzędne Kawiarni Kota Gacka
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap',
+    maxZoom: 19
+  }).addTo(map);
+
+  L.marker([53.4279, 14.5521]).addTo(map)
+    .bindPopup('Kawiarnia Fundacji Kota Gacka<br>ul. Kaszubska 17/u1, Szczecin')
+    .openPopup();
+</script>
+
   </div>
 
   <div class="place">
@@ -259,6 +311,22 @@ main, .gallery-container, .place, .content {
     
       <button class="scroll-button right" onclick="scrollGallery('gallery-5', 300)">→</button>
     </div>
+    <script>
+  // Współrzędne kawiarni Przystań – Kawa i Wino
+  var map = L.map('map').setView([53.4325, 14.5486], 16);
+
+  // Warstwa mapy z OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap',
+    maxZoom: 19
+  }).addTo(map);
+
+  // Pinezka z dymkiem
+  L.marker([53.4325, 14.5486]).addTo(map)
+    .bindPopup('Przystań – Kawa i Wino<br>ul. Rayskiego 19/U2, Szczecin')
+    .openPopup();
+</script>
+
   </div>
 
   <div class="place">
@@ -287,6 +355,22 @@ main, .gallery-container, .place, .content {
     
       <button class="scroll-button right" onclick="scrollGallery('gallery-6', 300)">→</button>
     </div>
+    <script>
+  // Współrzędne kawiarni Lavenda. Coffee & Cakes
+  var map = L.map('map').setView([53.4292, 14.5539], 16);
+
+  // Warstwa mapy z OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap',
+    maxZoom: 19
+  }).addTo(map);
+
+  // Pinezka z dymkiem
+  L.marker([53.4292, 14.5539]).addTo(map)
+    .bindPopup('Lavenda. Coffee & Cakes<br>ul. Kilińskiego 47, Szczecin')
+    .openPopup();
+</script>
+
   </div>
 
   <div class="place">
@@ -322,6 +406,27 @@ main, .gallery-container, .place, .content {
 
       
     </div>
+    <!-- Kontener mapy -->
+<div id="map" style="height: 400px; width: 100%;"></div>
+
+<!-- Leaflet CSS i JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt inicjujący mapę -->
+<script>
+  var map = L.map('map').setView([53.4294, 14.5522], 16); // Współrzędne Koci Zakątek Cafe
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap',
+    maxZoom: 19
+  }).addTo(map);
+
+  L.marker([53.4294, 14.5522]).addTo(map)
+    .bindPopup('Koci Zakątek Cafe<br>ul. Śląska 5, Szczecin')
+    .openPopup();
+</script>
+
   </div>
 
   <div class="place">
@@ -355,6 +460,27 @@ main, .gallery-container, .place, .content {
 
       
     </div>
+    <!-- Kontener mapy -->
+<div id="map" style="height: 400px; width: 100%;"></div>
+
+<!-- Leaflet CSS i JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt inicjujący mapę -->
+<script>
+  var map = L.map('map').setView([53.4294, 14.5522], 16); // Współrzędne Limone Cafe
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap',
+    maxZoom: 19
+  }).addTo(map);
+
+  L.marker([53.4294, 14.5522]).addTo(map)
+    .bindPopup('Limone Cafe<br>ul. Jasne Błonia 19, Szczecin')
+    .openPopup();
+</script>
+
   </div>
 
   <div class="place">
@@ -383,6 +509,27 @@ main, .gallery-container, .place, .content {
     
       <button class="scroll-button right" onclick="scrollGallery('gallery-9', 300)">→</button>
     </div>
+    <!-- Kontener mapy -->
+<div id="map" style="height: 400px; width: 100%;"></div>
+
+<!-- Leaflet CSS i JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt inicjujący mapę -->
+<script>
+  var map = L.map('map').setView([53.4271, 14.5358], 16); // Współrzędne Patio Cafe
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap',
+    maxZoom: 19
+  }).addTo(map);
+
+  L.marker([53.4271, 14.5358]).addTo(map)
+    .bindPopup('Patio Cafe<br>Aleja Bohaterów Warszawy 40, Szczecin')
+    .openPopup();
+</script>
+
   </div>
 
   <div class="place">
@@ -415,6 +562,27 @@ main, .gallery-container, .place, .content {
 
       
     </div>
+    <!-- Kontener mapy -->
+<div id="map" style="height: 400px; width: 100%;"></div>
+
+<!-- Leaflet CSS i JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Skrypt inicjujący mapę -->
+<script>
+  var map = L.map('map').setView([53.4283, 14.5522], 16); // Współrzędne Orsola – Coffee Haus
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap',
+    maxZoom: 19
+  }).addTo(map);
+
+  L.marker([53.4283, 14.5522]).addTo(map)
+    .bindPopup('Orsola – Coffee Haus<br>Plac Żołnierza Polskiego 3/1, Szczecin')
+    .openPopup();
+</script>
+
   </div>
   
   

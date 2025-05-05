@@ -6,3 +6,5 @@ W skład zespołu wchodzą: Weronika Biegun, Patrycja Wolarz, Amelia Jaworska, K
 
 Weronika Biegun odpowiedzialna była za stronę główną, Patrycja Wolarz za sekcje z atrakcjami, Katarzyna Stencel za sekcje z restauracjami a Amelia Jaworska zajęła się sekcją z kawiarniami.
 W naszym projekcie uwzględniłyśmy mapy, scrollowane galerie zdjęć, animacje na stronie a także animacje scrollowania.
+
+Link do strony: https://243-231.github.io/Zakochaj-Sie-W-Szczecinie/index.html
